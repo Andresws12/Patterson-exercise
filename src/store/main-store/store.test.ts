@@ -1,21 +1,14 @@
 import Vuex from 'vuex';
 
-// import { getUsers } from '@/webservices/UsersWebservice';
-
 import { createLocalVue } from '@vue/test-utils';
 import { inject, createStore } from 'vuex-smart-module';
+
 import MainActions from './MainActions';
 
 import MainStore from './MainStore';
 
-// const getUsersMock: jest.MockedFunction<typeof getUsers> = getUsers as any;
-
 const commit = jest.fn();
 const dispatch = jest.fn();
-
-jest.mock('@/webservices/UsersWebservice', () => ({
-    getUsers: jest.fn(),
-}));
 
 describe('Translations store', () => {
     beforeEach(() => {

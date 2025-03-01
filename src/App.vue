@@ -3,6 +3,7 @@
         <nav-bar />
         <router-view />
         <b-loading :is-full-page="true" v-model="isLoading"></b-loading>
+        <github-button />
     </div>
 </template>
 
@@ -12,6 +13,7 @@ import { Component, Vue, Watch } from 'vue-property-decorator';
 import Axios from 'axios';
 
 import NavBar from '@/components/common/NavBar.vue';
+import GithubButton from '@/components/GithubButton.vue';
 
 import mainStore from '@/store/main-store/MainStore';
 
@@ -19,6 +21,7 @@ import mainStore from '@/store/main-store/MainStore';
     name: 'App',
     components: {
         NavBar,
+        GithubButton,
     },
 })
 export default class App extends Vue {
